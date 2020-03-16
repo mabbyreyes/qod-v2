@@ -43,7 +43,8 @@ public class Quote implements FlatQuote {
   private static EntityLinks entityLinks;
 
   @NonNull
-  @Id@GeneratedValue(generator = "uuid2")
+  @Id
+  @GeneratedValue(generator = "uuid2")
   @GenericGenerator(name = "uuid2", strategy = "uuid2")
   @Column(name = "quote_id", columnDefinition = "CHAR(16) FOR BIT DATA",
       nullable = false, updatable = false)
@@ -134,5 +135,6 @@ public class Quote implements FlatQuote {
   private void setEntityLinks(EntityLinks entityLinks) {
     Quote.entityLinks = entityLinks;
   }
+
 
 }
